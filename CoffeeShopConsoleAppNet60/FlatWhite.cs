@@ -6,35 +6,30 @@ using System.Threading.Tasks;
 
 namespace CoffeeShopConsoleAppNet60
 {
-    public class Cortado : Coffee, IMilk
+    public class FlatWhite : Coffee
     {
 
-        public Cortado(int discount) :base(discount)
+        public FlatWhite() :base()
         {
         }
 
-        public Cortado() :base()
+        public FlatWhite(int discount) : base(discount)
         {
         }
-    
+
         public override string CoffeeType()
         {
-            return "Cortado";
-        }
-
-        public int mlMilk(int mlMilk)
-        {
-            return 40;
-        }
-
-        public override int pricemethod()
-        {
-            return 25 - base.Discount;
+            return "FlatWhite";
         }
 
         public override string strength()
         {
-            return "Medium";
+            return "weak";
+        }
+
+        public override int pricemethod()
+        {
+            return 15 - base.Discount;
         }
     }
 }
